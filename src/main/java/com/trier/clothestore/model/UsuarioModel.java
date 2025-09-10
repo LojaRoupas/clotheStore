@@ -7,7 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "TBCLIENTE")
+@Table(name = "TBUSUARIO")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
@@ -17,19 +17,19 @@ public class UsuarioModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    @Column(name = "cdCliente")
-    private Integer cdCliente;
+    @Column(name = "cdUsuario")
+    private Integer cdUsuario;
 
-    @Column(name = "nmCliente")
-    private String nmCliente;
+    @Column(name = "nmUsuario")
+    private String nmUsuario;
 
-    @Column(name = "cpfCliente")
-    private String cpfCliente;
+    @Column(name = "cpfUsuario")
+    private String cpfUsuario;
 
-    @Column(name = "telefoneCliente")
-    private String telefoneCliente;
+    @Column(name = "telefoneUsuario")
+    private String telefoneUsuario;
 
-    @Column(name = "emailCliente")
-    private String emailCliente;
+    @Column(name = "Usuario")
+    private String emailUsuario;
 
 }
