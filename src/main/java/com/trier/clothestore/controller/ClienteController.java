@@ -1,4 +1,4 @@
-package com.farmacia.elessandro.controller;
+package com.trier.clothestore.controller;
 
 import com.farmacia.elessandro.dto.ClienteDto;
 import com.farmacia.elessandro.model.ClienteModel;

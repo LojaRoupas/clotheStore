@@ -1,9 +1,9 @@
 package com.trier.clothestore.controller;
 
 import org.springframework.http.HttpStatus;
-import com.farmacia.elessandro.dto.ProdutoDto;
-import com.farmacia.elessandro.model.ProdutoModel;
-import com.farmacia.elessandro.repository.ProdutoRepository;
+import com.trier.clothestore.dto.ProdutoDto;
+import com.trier.clothestore.model.ProdutoModel;
+import com.trier.clothestore.repository.ProdutoRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
