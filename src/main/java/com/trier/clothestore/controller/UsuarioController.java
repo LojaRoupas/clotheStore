@@ -1,7 +1,6 @@
 package com.trier.clothestore.controller;
 
 import com.farmacia.elessandro.dto.ClienteDto;
-import com.farmacia.elessandro.repository.ClienteRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +16,7 @@ import java.util.Optional;
 
 public class UsuarioController {
     @Autowired
-    private ClienteRepository clienteRepository;
+    private com.farmacia.elessandro.repository.UsuarioRepository clienteRepository;
 
     @PostMapping
     public ResponseEntity<com.farmacia.elessandro.model.UsuarioModel> salvar(@RequestBody @Valid ClienteDto clienteDto) {

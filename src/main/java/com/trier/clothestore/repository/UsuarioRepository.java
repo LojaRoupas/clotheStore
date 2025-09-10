@@ -6,7 +6,7 @@ import org.springframework.stereotype.Repository;
 import java.util.Optional;
 
     @Repository
-    public interface ClienteRepository extends JpaRepository<com.farmacia.elessandro.model.UsuarioModel, Integer> {
+    public interface UsuarioRepository extends JpaRepository<com.farmacia.elessandro.model.UsuarioModel, Integer> {
         Optional<com.farmacia.elessandro.model.UsuarioModel> findByCdCliente(Integer cdCliente);
         Optional<com.farmacia.elessandro.model.UsuarioModel> findAllByCdCliente(Integer cdCliente);
 
