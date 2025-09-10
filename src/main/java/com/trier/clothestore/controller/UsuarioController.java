@@ -15,7 +15,7 @@ import java.util.Optional;
 @CrossOrigin(origins = "*")
 @RequestMapping("/api/v1/cliente")
 
-public class ClienteController {
+public class UsuarioController {
     @Autowired
     private ClienteRepository clienteRepository;
 
