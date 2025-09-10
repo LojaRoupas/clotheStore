@@ -1,4 +1,4 @@
-package com.farmacia.elessandro.repository;
+package com.trier.clothestore.repository;
 
 import com.farmacia.elessandro.model.ProdutoModel;
 import org.springframework.data.jpa.repository.JpaRepository;

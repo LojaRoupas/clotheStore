@@ -1,4 +1,4 @@
-package com.farmacia.elessandro.dto;
+package com.trier.clothestore.dto;
 
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;

@@ -1,4 +1,4 @@
-package com.farmacia.elessandro.model;
+package com.trier.clothestore.model;
 
 
 import jakarta.persistence.*;
