@@ -3,16 +3,16 @@ package com.trier.clothestore.dto;
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 
-public record ClienteDto(
+public record UsuarioDto(
         @NotBlank(message = "Nao e possivel salvar um cliente sem nome")
-        String nmCliente,
+        String nmUsuario,
 
         @NotBlank(message = "Nao e possivel salvar um cliente sem cpf")
-        String cpfCliente,
+        String cpfUsuario,
 
         @NotBlank(message = "Nao e possivel salvar um cliente sem telefone")
-        String telefoneCliente,
+        String telefoneUsuario,
 
         @Email @NotBlank(message = "Nao e possivel salvar um cliente sem email")
-        String emailCliente) {
+        String emailUsuario) {
 }

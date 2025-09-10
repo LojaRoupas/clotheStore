@@ -1,6 +1,6 @@
 package com.trier.clothestore.repository;
 
-import com.farmacia.elessandro.model.ProdutoModel;
+import com.trier.clothestore.model.ProdutoModel;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

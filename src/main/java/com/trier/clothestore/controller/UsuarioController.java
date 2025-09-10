@@ -1,8 +1,6 @@
 package com.trier.clothestore.controller;
 
-import com.farmacia.elessandro.dto.ClienteDto;
-import com.farmacia.elessandro.model.ClienteModel;
-import com.farmacia.elessandro.repository.ClienteRepository;
+import com.trier.clothestore.dto.UsuarioDto;
 import com.trier.clothestore.model.UsuarioModel;
 import com.trier.clothestore.repository.UsuarioRepository;
 import jakarta.validation.Valid;
@@ -17,7 +15,7 @@ import java.util.Optional;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping("/api/v1/cliente")
+@RequestMapping("/api/v1/usuario")
 
 public class UsuarioController {
     @Autowired
@@ -38,7 +36,7 @@ public class UsuarioController {
 
     @GetMapping("/{cdUsuario}")
     public ResponseEntity<Object> getUsuario(@PathVariable("cdUsuario") Integer cdUsuario) {
-        Optional<UsuarioModel> cliente0 = usuarioRepository.findById(cdUsuario);
+        Optional<UsuarioModel> usuario0 = usuarioRepository.findById(cdUsuario);
         if (usuario0.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario nao encontrado");
         }
