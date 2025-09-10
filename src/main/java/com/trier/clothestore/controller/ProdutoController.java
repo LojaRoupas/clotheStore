@@ -1,4 +1,4 @@
-package com.farmacia.elessandro.controller;
+package com.trier.clothestore.controller;
 
 import org.springframework.http.HttpStatus;
 import com.farmacia.elessandro.dto.ProdutoDto;

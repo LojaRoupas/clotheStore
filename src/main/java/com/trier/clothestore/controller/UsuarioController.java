@@ -1,4 +1,4 @@
-package com.farmacia.elessandro.controller;
+package com.trier.clothestore.controller;
 
 import com.farmacia.elessandro.dto.ClienteDto;
 import com.farmacia.elessandro.repository.ClienteRepository;
@@ -15,7 +15,7 @@ import java.util.Optional;
 @CrossOrigin(origins = "*")
 @RequestMapping("/api/v1/cliente")
 
-public class ClienteController {
+public class UsuarioController {
     @Autowired
     private ClienteRepository clienteRepository;
 
