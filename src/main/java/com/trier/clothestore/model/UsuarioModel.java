@@ -17,19 +17,17 @@ public class UsuarioModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
 
-    @Column(name = "cdUsuario")
-    private Integer cdUsuario;
+    @Column(name = "idUsuario")
+    private Integer idUsuario;
 
-    @Column(name = "nmUsuario")
-    private String nmUsuario;
+//    @Column(name = "nomeUsuario")
+//    private String nomeUsuario;
 
-    @Column(name = "cpfUsuario")
-    private String cpfUsuario;
-
-    @Column(name = "telefoneUsuario")
-    private String telefoneUsuario;
-
-    @Column(name = "Usuario")
+    @Column(name = "emailUsuario")
     private String emailUsuario;
 
+    @Column(name = "senhaUsuario")
+    private String senhaUsuario;
+
+    //papel usuario
 }

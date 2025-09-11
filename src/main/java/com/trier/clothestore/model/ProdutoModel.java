@@ -15,15 +15,12 @@ public class ProdutoModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "cdProduto")
-    private Integer cdProduto;
+    @Column(name = "idProduto")
+    private Integer idProduto;
 
-    @Column(name = "nmProduto")
-    private String nmProduto;
+    @Column(name = "nomeProduto")
+    private String nomeProduto;
 
-    @Column(name = "dsBula")
-    private String dsBula;
-
-    @Column(name = "vlProduto")
+    @Column(name = "precoProduto")
     private Double vlProduto;
 }
