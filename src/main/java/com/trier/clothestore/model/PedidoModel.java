@@ -5,23 +5,23 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Entity
-@Table(name = "TBITEMPEDIDO")
+@Table(name = "TBPEDIDO")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 
-public class ItemPedidoModel {
+public class PedidoModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idItemPedido")
-    private Integer idItemPedido;
+    @Column(name = "idPedido")
+    private Integer idPedido;
 
-    @Column(name = "quantidade")
-    private Integer quantidade;
-
-    @Column(name = "precoUnitario")
-    private Double precoUnitario;
+//verificar aqui
+//    @OneToMany(mappedBy = "pedido")
+//    private List<ItemPedidoModel> itens;
 
     }

@@ -1,43 +1,47 @@
 package com.trier.clothestore.controller;
 
-import org.springframework.http.HttpStatus;
+import com.trier.clothestore.dto.PedidoDto;
 import com.trier.clothestore.dto.ProdutoDto;
+import com.trier.clothestore.model.PedidoModel;
 import com.trier.clothestore.model.ProdutoModel;
+import com.trier.clothestore.repository.PedidoRepository;
 import com.trier.clothestore.repository.ProdutoRepository;
 import jakarta.validation.Valid;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.List;
 import java.util.Optional;
 
 @RestController
 @CrossOrigin(origins = "*")
-@RequestMapping("/api/v1/produto")
+@RequestMapping("/api/v1/pedido")
 
-public class ProdutoController {
+public class PedidoController {
     @Autowired
-    private ProdutoRepository produtoRepository;
+    private PedidoRepository pedidoRepository;
 
     @PostMapping
-    public ResponseEntity<ProdutoModel> salvar(@RequestBody @Valid ProdutoDto produtoDto) {
-        var produtoModel = new ProdutoModel();
-        BeanUtils.copyProperties(produtoDto, produtoModel);
-        return ResponseEntity.status(HttpStatus.CREATED).body(produtoRepository.save(produtoModel));
+    public ResponseEntity<PedidoModel> salvar(@RequestBody @Valid PedidoDto pedidoDto) {
+        var pedidoModel = new PedidoModel();
+        BeanUtils.copyProperties(pedidoDto, pedidoModel);
+        return ResponseEntity.status(HttpStatus.CREATED).body(pedidoRepository.save(pedidoModel));
     }
 
     @GetMapping()
-    public ResponseEntity<List<ProdutoModel>> listar() {
-        return ResponseEntity.status(HttpStatus.OK).body(produtoRepository.findAll());
+    public ResponseEntity<List<PedidoModel>> listar() {
+        return ResponseEntity.status(HttpStatus.OK).body(pedidoRepository.findAll());
     }
 
-    @GetMapping("/{idProduto}")
-    public ResponseEntity<Object> getProduto(@PathVariable("idProduto") Integer idProduto) {
-        Optional<ProdutoModel> produto0 = produtoRepository.findById(idProduto);
-        if (produto0.isEmpty()) {
-            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Produto nâo encontrado");
+    @GetMapping("/{idPedido}")
+    public ResponseEntity<Object> getPedido(@PathVariable("idPedido") Integer idProduto) {
+        Optional<PedidoModel> pedido0 = pedidoRepository.findById(idProduto);
+        if (pedido0.isEmpty()) {
+            return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Pedido nâo encontrado");
         }
-        return ResponseEntity.status(HttpStatus.OK).body(produto0.get());
+        return ResponseEntity.status(HttpStatus.OK).body(pedido0.get());
     }
 }

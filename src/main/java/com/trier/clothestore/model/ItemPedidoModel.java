@@ -6,18 +6,22 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "TBPEDIDO")
+@Table(name = "TBITEMPEDIDO")
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
 
-public class PedidoModel {
+public class ItemPedidoModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "idPedido")
-    private Integer idPedido;
+    @Column(name = "idItemPedido")
+    private Integer idItemPedido;
 
-    //criar um list
+    @Column(name = "quantidade")
+    private Integer quantidade;
 
-}
+    @Column(name = "precoUnitario")
+    private Double precoUnitario;
+
+    }
