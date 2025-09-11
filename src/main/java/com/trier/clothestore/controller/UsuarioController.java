@@ -26,6 +26,7 @@ public class UsuarioController {
         var usuarioModel = new UsuarioModel();
         BeanUtils.copyProperties(usuarioDto, usuarioModel);
         return ResponseEntity.status(HttpStatus.CREATED).body(usuarioRepository.save(usuarioModel));
+
     }
 
     @GetMapping()

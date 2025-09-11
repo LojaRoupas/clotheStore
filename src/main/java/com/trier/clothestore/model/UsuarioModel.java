@@ -20,14 +20,10 @@ public class UsuarioModel {
     @Column(name = "idUsuario")
     private Integer idUsuario;
 
-//    @Column(name = "nomeUsuario")
-//    private String nomeUsuario;
-
     @Column(name = "emailUsuario")
     private String emailUsuario;
 
     @Column(name = "senhaUsuario")
     private String senhaUsuario;
 
-    //papel usuario
 }

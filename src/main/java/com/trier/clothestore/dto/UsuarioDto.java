@@ -5,9 +5,6 @@ import jakarta.validation.constraints.NotBlank;
 
 public record UsuarioDto(
 
-//        @NotBlank(message = "Nao e possivel salvar um usuario sem nome")
-//        String nomeUsuario,
-
         @NotBlank(message = "Nao e possivel salvar um usuario sem cpf")
         String cpfUsuario,
 
@@ -16,7 +13,5 @@ public record UsuarioDto(
 
         @NotBlank(message = "Nao e possivel salvar um usuario sem email")
         String senhalUsuario) {
-
-       // ver papel usuario
 
 }

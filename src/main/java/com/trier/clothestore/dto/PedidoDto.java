@@ -9,7 +9,7 @@ import java.util.List;
 
 public record PedidoDto(
 
-        @NotNull(message = "A lista de itens nao pode ser nula")
+        @NotNull(message = "A lista não pode estar vazia")
         @Size(min = 1, message = "O pedido deve conter ao menos um item")
         List<ItemPedidoDto> itens) {
 }

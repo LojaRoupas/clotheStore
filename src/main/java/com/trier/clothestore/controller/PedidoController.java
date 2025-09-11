@@ -37,8 +37,8 @@ public class PedidoController {
     }
 
     @GetMapping("/{idPedido}")
-    public ResponseEntity<Object> getPedido(@PathVariable("idPedido") Integer idProduto) {
-        Optional<PedidoModel> pedido0 = pedidoRepository.findById(idProduto);
+    public ResponseEntity<Object> getPedido(@PathVariable("idPedido") Integer idPedido) {
+        Optional<PedidoModel> pedido0 = pedidoRepository.findById(idPedido);
         if (pedido0.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Pedido nâo encontrado");
         }

@@ -20,8 +20,8 @@ public class PedidoModel {
     @Column(name = "idPedido")
     private Integer idPedido;
 
-//verificar aqui
-//    @OneToMany(mappedBy = "pedido")
-//    private List<ItemPedidoModel> itens;
-
+//VERIFICAR AQUI EM BAIXO
+    @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL, orphanRemoval = true)
+    private List<ItemPedidoModel> itens;
+//
     }
