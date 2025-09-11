@@ -34,9 +34,9 @@ public class UsuarioController {
     }
 
 
-    @GetMapping("/{cdUsuario}")
-    public ResponseEntity<Object> getUsuario(@PathVariable("cdUsuario") Integer cdUsuario) {
-        Optional<UsuarioModel> usuario0 = usuarioRepository.findById(cdUsuario);
+    @GetMapping("/{idUsuario}")
+    public ResponseEntity<Object> getUsuario(@PathVariable("idUsuario") Integer idUsuario) {
+        Optional<UsuarioModel> usuario0 = usuarioRepository.findById(idUsuario);
         if (usuario0.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Usuario nao encontrado");
         }

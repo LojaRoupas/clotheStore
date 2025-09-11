@@ -22,5 +22,5 @@ public class ProdutoModel {
     private String nomeProduto;
 
     @Column(name = "precoProduto")
-    private Double vlProduto;
+    private Double precoProduto;
 }

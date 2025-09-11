@@ -32,9 +32,9 @@ public class ProdutoController {
         return ResponseEntity.status(HttpStatus.OK).body(produtoRepository.findAll());
     }
 
-    @GetMapping("/{cdProduto}")
-    public ResponseEntity<Object> getProduto(@PathVariable("cdProduto") Integer cdProduto) {
-        Optional<ProdutoModel> produto0 = produtoRepository.findById(cdProduto);
+    @GetMapping("/{idProduto}")
+    public ResponseEntity<Object> getProduto(@PathVariable("idProduto") Integer idProduto) {
+        Optional<ProdutoModel> produto0 = produtoRepository.findById(idProduto);
         if (produto0.isEmpty()) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body("Produto nâo encontrado");
         }
