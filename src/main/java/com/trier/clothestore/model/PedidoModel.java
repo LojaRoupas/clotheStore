@@ -25,12 +25,4 @@ public class PedidoModel {
     @JsonManagedReference // Anotacao tirar loop infinito
     private List<ItemPedidoModel> itens;
 
-    //getters e setter
-    public List<ItemPedidoModel> getItens() {
-        return itens;
-    }
-
-    public void setItens(List<ItemPedidoModel> itens) {
-        this.itens = itens;
-    }
 }
