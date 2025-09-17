@@ -18,9 +18,26 @@ public class ProdutoModel {
     @Column(name = "idProduto")
     private Integer idProduto;
 
-    @Column(name = "nomeProduto")
+    @Column(name = "nomeProduto", length = 50)
     private String nomeProduto;
 
     @Column(name = "precoProduto")
     private Double precoProduto;
+
+    public Double getPrecoProduto() {
+        return precoProduto;
+    }
+
+    public void setPrecoProduto(Double precoProduto) {
+        this.precoProduto = precoProduto;
+    }
+
+    public String getNomeProduto() {
+        return nomeProduto;
+    }
+
+    public void setNomeProduto(String nomeProduto) {
+        this.nomeProduto = nomeProduto;
+    }
+
 }

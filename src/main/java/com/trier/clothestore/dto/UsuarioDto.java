@@ -5,13 +5,10 @@ import jakarta.validation.constraints.NotBlank;
 
 public record UsuarioDto(
 
-        @NotBlank(message = "Nao e possivel salvar um usuario sem cpf")
-        String cpfUsuario,
-
-        @Email @NotBlank(message = "Nao e possivel salvar um usuario sem email")
+        @Email @NotBlank(message = "Não é possível salvar um usuário sem o email")
         String emailUsuario,
 
-        @NotBlank(message = "Nao e possivel salvar um usuario sem email")
-        String senhalUsuario) {
+        @NotBlank(message = "Não é possível salvar um usuário sem o email")
+        String senhaUsuario) {
 
 }

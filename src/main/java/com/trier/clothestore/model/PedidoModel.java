@@ -1,10 +1,10 @@
 package com.trier.clothestore.model;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 import java.util.List;
 
 @Entity
@@ -20,8 +20,17 @@ public class PedidoModel {
     @Column(name = "idPedido")
     private Integer idPedido;
 
-//VERIFICAR AQUI EM BAIXO
-    @OneToMany(mappedBy = "pedido", cascade = CascadeType.ALL, orphanRemoval = true)
+    //BANCO
+    @OneToMany(mappedBy = "pedido", cascade = CascadeType.PERSIST)
+    @JsonManagedReference // Anotacao tirar loop infinito
     private List<ItemPedidoModel> itens;
-//
+
+    //getters e setter
+    public List<ItemPedidoModel> getItens() {
+        return itens;
     }
+
+    public void setItens(List<ItemPedidoModel> itens) {
+        this.itens = itens;
+    }
+}
