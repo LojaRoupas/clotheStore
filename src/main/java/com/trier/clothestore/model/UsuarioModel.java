@@ -51,21 +51,6 @@ public class UsuarioModel implements UserDetails {
         return emailUsuario;
     }
 
-    //Métodos para lombok
-    public String getEmailUsuario() {
-        return emailUsuario;
-    }
 
-    public void setEmailUsuario(String emailUsuario) {
-        this.emailUsuario = emailUsuario;
-    }
-
-    public String getSenhaUsuario() {
-        return senhaUsuario;
-    }
-
-    public void setSenhaUsuario(String senhaUsuario) {
-        this.senhaUsuario = senhaUsuario;
-    }
 
 }
