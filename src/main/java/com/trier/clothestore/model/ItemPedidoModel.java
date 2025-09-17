@@ -24,13 +24,12 @@ public class ItemPedidoModel {
     @Column(name = "precoUnitario")
     private Double precoUnitario;
 
-// VERIFICAR AQUI EM BAIXO
+
     @ManyToOne
     @JoinColumn(name = "idPedido")
     private PedidoModel pedido;
 
     public void setProduto(ProdutoModel produto) {
     }
-//
 
     }
