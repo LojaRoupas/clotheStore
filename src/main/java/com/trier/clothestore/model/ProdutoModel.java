@@ -24,20 +24,5 @@ public class ProdutoModel {
     @Column(name = "precoProduto")
     private Double precoProduto;
 
-    public Double getPrecoProduto() {
-        return precoProduto;
-    }
-
-    public void setPrecoProduto(Double precoProduto) {
-        this.precoProduto = precoProduto;
-    }
-
-    public String getNomeProduto() {
-        return nomeProduto;
-    }
-
-    public void setNomeProduto(String nomeProduto) {
-        this.nomeProduto = nomeProduto;
-    }
 
 }
