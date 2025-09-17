@@ -29,7 +29,11 @@ public class ItemPedidoModel {
     @JoinColumn(name = "idPedido")
     private PedidoModel pedido;
 
-        public void setProduto(ProdutoModel produto) {
-    }
+    @ManyToOne
+    @JoinColumn(name = "idProduto")
+    private ProdutoModel produto;
+
+//        public void setProduto(ProdutoModel produto) {
+//    }
 
     }
