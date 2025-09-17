@@ -22,13 +22,13 @@ public class PedidoController {
 
     @PostMapping
     public ResponseEntity<PedidoModel> salvar(@RequestBody @Valid PedidoDto pedidoDto) {
-        PedidoModel pedido0 = pedidoService.salvar(pedidoDto); // USA SERVICE
+        PedidoModel pedido0 = pedidoService.salvar(pedidoDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(pedido0);
     }
 
     @GetMapping()
     public ResponseEntity<List<PedidoModel>> listar() {
-        return ResponseEntity.status(HttpStatus.OK).body(pedidoService.listar()); // USA SERVICE
+        return ResponseEntity.status(HttpStatus.OK).body(pedidoService.listar());
     }
 
     @GetMapping("/{idPedido}")

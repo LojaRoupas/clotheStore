@@ -24,12 +24,12 @@ public class ItemPedidoModel {
     @Column(name = "precoUnitario")
     private Double precoUnitario;
 
-
+//BANCO
     @ManyToOne
     @JoinColumn(name = "idPedido")
     private PedidoModel pedido;
 
-    public void setProduto(ProdutoModel produto) {
+        public void setProduto(ProdutoModel produto) {
     }
 
     }
