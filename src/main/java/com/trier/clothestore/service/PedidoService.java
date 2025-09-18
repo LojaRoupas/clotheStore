@@ -31,7 +31,7 @@ public class PedidoService {
             var itemModel = new ItemPedidoModel();
             itemModel.setQuantidade(itemDto.quantidade());
             itemModel.setPrecoUnitario(itemDto.precoUnitario());
-            itemModel.setPedido(pedidoModel); // associa o item ao pedido
+            itemModel.setPedido(pedidoModel);
 
 
             ProdutoModel produto = produtoRepository.findById(itemDto.idProduto())
