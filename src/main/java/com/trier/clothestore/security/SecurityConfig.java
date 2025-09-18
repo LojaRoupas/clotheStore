@@ -21,11 +21,9 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @EnableWebSecurity
 public class SecurityConfig {
 
-    // Instâncias de JwtUtil e UserDetailsService injetadas pelo Spring
     private final JwtUtil jwtUtil;
     private final UserDetailsService userDetailsService;
 
-    // Construtor para injeção de dependências de JwtUtil e UserDetailsService
     @Autowired
     public SecurityConfig(JwtUtil jwtUtil, UserDetailsService userDetailsService) {
         this.jwtUtil = jwtUtil;
@@ -41,21 +39,15 @@ public class SecurityConfig {
         http
                 .csrf(AbstractHttpConfigurer::disable) // Desativa proteção CSRF para APIs REST (não aplicável a APIs que não mantêm estado)
                 .authorizeHttpRequests(authorize -> authorize
-
-
-                                .requestMatchers(HttpMethod.POST, "/api/v1/usuario").permitAll() // Permite acesso ao endpoint POST /usuario sem autenticação
-                                .requestMatchers(HttpMethod.POST, "/api/v1/usuario/login").permitAll()// Permite acesso ao endpoint GET /auth sem autenticação
-
+                                .requestMatchers(HttpMethod.POST, "/api/v1/usuario").permitAll()
+                                .requestMatchers(HttpMethod.POST, "/api/v1/usuario/login").permitAll()
                                 .requestMatchers("/api/v1/produto/**").authenticated()
                                 .requestMatchers("/api/v1/pedido/**").authenticated()
-
-
-                        .anyRequest().permitAll()
+                                .anyRequest().permitAll()
                 )
                 .sessionManagement(session -> session
-                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS) // Configura a política de sessão como stateless (sem sessão)
+                        .sessionCreationPolicy(SessionCreationPolicy.STATELESS)
                 )
-
                 .exceptionHandling(exceptions -> exceptions
                         .authenticationEntryPoint((request, response, authException) -> {
                             response.setStatus(HttpServletResponse.SC_UNAUTHORIZED);
@@ -65,7 +57,6 @@ public class SecurityConfig {
                 )
 
                 .addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class); // Adiciona o filtro JWT antes do filtro de autenticação padrão
-
 
         // Retorna a configuração do filtro de segurança construída
         return http.build();
