@@ -16,8 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 @AllArgsConstructor
 @Data
-@Getter
-@Setter
+
 
 
 public class UsuarioModel implements UserDetails {
@@ -50,7 +49,4 @@ public class UsuarioModel implements UserDetails {
     public String getUsername() {
         return emailUsuario;
     }
-
-
-
 }

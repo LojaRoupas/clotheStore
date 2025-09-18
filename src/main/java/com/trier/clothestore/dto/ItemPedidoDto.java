@@ -1,3 +1,4 @@
+
 package com.trier.clothestore.dto;
 
 import jakarta.validation.constraints.DecimalMin;
@@ -11,7 +12,6 @@ public record ItemPedidoDto(
 
         @NotNull(message = "Não é possível salvar um produto sem quantidade")
         Integer quantidade,
-
 
         @NotNull(message = "Não é possível salvar um produto sem valor")
         @DecimalMin(value = "0.01", message = "Não é possivel salvar um valor abaixo de 0.01")

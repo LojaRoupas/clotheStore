@@ -2,13 +2,12 @@ package com.trier.clothestore.controller;
 
 import com.trier.clothestore.dto.PedidoDto;
 import com.trier.clothestore.model.PedidoModel;
-import com.trier.clothestore.service.PedidoService; // MUDOU AQUI
+import com.trier.clothestore.service.PedidoService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Optional;
 

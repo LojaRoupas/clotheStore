@@ -13,7 +13,6 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
-
 import java.util.List;
 import java.util.Optional;
 
@@ -28,7 +27,6 @@ public class UsuarioController {
     private AuthenticationManager authenticationManager;
     @Autowired
     private JwtUtil jwtUtil;
-
 
     @PostMapping
     public ResponseEntity<UsuarioModel> salvar(@RequestBody @Valid UsuarioDto usuarioDto) {

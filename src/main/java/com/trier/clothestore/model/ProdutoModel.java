@@ -24,5 +24,4 @@ public class ProdutoModel {
     @Column(name = "precoProduto")
     private Double precoProduto;
 
-
 }
